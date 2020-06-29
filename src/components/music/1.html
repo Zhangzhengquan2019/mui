@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+* {box-sizing: border-box;margin: 0;padding: 0}
+.box, .aa img{width: 250px;height: 350px;overflow: hidden;}  /*范围之外不可见*/
+.text {
+    background: rgba(0,0,0,.5);
+    padding: 10px;
+    color:#fff;
+    font-size: 20px;
+    position: relative;
+    margin-top: 0;     /*text默认处于aa盒子下面,所以不可见*/
+    transition: .5s}   /*transition为过渡动画效果，时间0.5秒*/
+.box:hover .text {margin-top: -72px}   /*鼠标经过box, 则text逐渐上移到aa范围内*/
+
+.text span {font-size: 16px;color: #655c5c}
+.text img {width: 100%}
+</style>
+</head>
+
+<body>
+<div class="box">
+    <div class="aa">
+
+    </div>
+
+    <div class="text">
+        <p>我是隐藏的DIV标题</p> <span>我也是隐藏的内容介绍</span>
+    </div>
+</div>
+</body>
+</html>
